@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>冯国欣的个人简历</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+  <link rel="stylesheet" href="./css/a.css">
+  <script src="//at.alicdn.com/t/font_1169087_4b9kiwqzyf5.js"></script>
+  <style>
+    html {
+      overflow-y: scroll;
+    }
+
+    :root {
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    :root body {
+      position: absolute;
+    }
+
+    body {
+      width: 100vw;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='siteWelcome' class="site-welcome active">
+    <div class="loading"></div>
+  </div>
+  <div id="topNavBar" class="topNavBar sticky">
+    <div class="topNavBar-inner clearfix">
+      <a class="logo" href="#" alt="logo" style="float:left;">
+        <span class="rs">F</span><span class="card">gx</span>
+      </a>
+      <nav class="menu">
+        <ul class="celarfix">
+          <li>
+            <a href="#siteAbout">关于</a>
+          </li>
+          <li>
+            <a href="#siteSkills">技能</a>
+          </li>
+          <li>
+            <a href="#siteWorks">项目</a>
+          </li>
+
+
+          <li>
+            <a href="#contact">联系方式</a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="banner">
+    <div class="mask"></div>
+  </div>
+  <main>
+
+
+    <div data-x id='siteAbout' class="userCard">
+      <div class="pictureAndText clearfix">
+        <div class="picture">
+          <img src="./pic/f.jpg" width=299 height=347 alt="头像">
+        </div>
+        <div class="text">
+          <div class="profile" class="clearfix">
+            <span class="welcome">
+              你好，我是一名前端工程师
+
+              <span class="triangle"></span>
+
+            </span>
+            <a class="downloadResume" href="./resume.pdf" target="_black" download>下载 PDF 简历</a><br>
+            <h1>冯国欣</h1>
+            <p class='describe'>前端开发工程师</p>
+            <p> 技能：前端开发，熟悉HTML5 && CSS3,svg,移动端，原生JavaScript,jQuery,Vue,react,理解MVC、MVVM思想</p>
+            <p>编程经历：在网上购买收费视频自学前端半年</p>
+            <hr>
+            <dl>
+              <dt>年龄</dt>
+              <dd>22</dd>
+              <dt>所在城市</dt>
+              <dd>上海</dd>
+              <dt>邮箱</dt>
+              <dd>782067903@qq.com</dd>
+              <dt>手机</dt>
+              <dd>13020165061</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <footer class="media">
+        <a href="https://github.com/a5595223">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-github"></use>
+          </svg>
+        </a>
+        <a href="https://www.jianshu.com/u/5ff4f63fdc3a">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-CN_jianshu"></use>
+          </svg>
+        </a>
+
+        <a href="./pic/w.jpg" target="_blank" onclick="window.open(this.href,'','width=400,height=400');return false" />
+        <svg class="icon weixin" aria-hidden="true">
+          <use xlink:href="#icon-weixin"></use>
+        </svg>
+        </a>
+      </footer>
+    </div>
+
+
+
+
+    <p class="selfIntroduction">
+      <br>
+    </p>
+
+  </main>
+  <section data-x id='siteSkills' class="skills">
+    <h2>技能</h2>
+    <ol class="clearfix">
+      <li class='skill'>
+        <h3>HTML5 &amp; CSS 3 ❤❤❤❤</h3>
+        <p>能独立制作精美网页，掌握 CSS 3 动画、过渡效果、响应式等常用技术。</p>
+      </li>
+      <li class='skill'>
+        <h3>移动端页面 ❤❤❤</h3>
+        <p>会使用 REM、vw/vh、FastClick 等技术制作适配手机设备的页面。</p>
+      </li>
+      <li class='skill'>
+        <h3>jQuery ❤❤❤</h3>
+        <p>熟悉 jQuery 的常用 API，能使用 jQuery 制作网站、轮播、Tab 组件等。</p>
+      </li>
+      <li class='skill'>
+        <h3>Vue ❤❤❤</h3>
+        <p>熟悉 Vue 常用功能，如组件、Vue-Router、插槽、生命周期、双向绑定等。</p>
+      </li>
+      <li class='skill'>
+        <h3>React ❤❤❤</h3>
+        <p>熟悉 react 常用功能，如组件、react-redux、react-hooks等。</p>
+      </li>
+      <li class='skill'>
+        <h3>框架工具 ❤❤</h3>
+        <p>less scss webpack parcel bootstrop 等前端架构工具</p>
+      </li>
+    </ol>
+  </section>
+  <section data-x id='siteWorks' class="portfolio">
+    <h2>项目</h2>
+
+    <!-- 变成轮播 -->
+
+    <!-- 这就是view -->
+
+    <div class="works">
+      <ol class="work-item">
+        <li class='item'>
+          <img src="./pic/nav-page.jpg" class="swiper-slide">
+          <h3>冯氏导航书签</h3>
+          <div><a href="https://a5595223.github.io/myBookmarks/index.html">预览链接</a>
+            <a href="https://github.com/a5595223/myBookmarks">源码链接</a></div>
+          <p>原生JavaScript实现书签导航，功能：按下对应键位可以进行跳转，可编辑对应键位跳转位置</p>
+        </li>
+        <li class='item'>
+          <img src="./pic/canvas.jpg" class="swiper-slide">
+          <h3>冯氏画板</h3>
+          <div><a href="https://a5595223.github.io/canvas/canvas.html">预览链接</a> <a
+              href="https://github.com/a5595223/canvas">源码链接</a></div>
+          <p>使用canvas 原生js 移动端事件 vw vh 实现pc+移动端画板功能。</p>
+        </li>
+        <li class='item'>
+          <img src="./pic/5.png" class="swiper-slide">
+          <h3>CNode社区</h3>
+          <div><a href="https://a5595223.github.io/cnode/dist/index.html#/">预览链接</a> <a
+              href="https://github.com/a5595223/cnode">源码链接</a></div>
+          <p>使用vue技术栈 vue-router 生命周期函数 计算属性 实现仿CNode社区</p>
+        </li>
+        <li class='item'>
+          <img src="./pic/10.jpg" class="swiper-slide">
+          <h3>冯氏简易ui框架(轮子持续更新中)</h3>
+          <div><a href="https://github.com/a5595223/gulu">使用、代码链接</a></div>
+          <p>使用vue插槽 事件 parcel scss mocha korma sinon-chai单元测试搭建ui框架</p>
+        </li>
+        <li class='item'>
+          <img src="./pic/8.jpg" class="swiper-slide">
+          <h3>会动的皮卡丘</h3>
+          <div><a href="https://a5595223.github.io/pikachu/index.html">预览链接</a>
+            <a href="https://github.com/a5595223/pikachu">代码链接</a>
+          </div>
+          <p>css3动画 过渡 jquery vh 移动端 实现动画效果 组合生成皮卡丘 </p>
+        </li>
+
+      </ol>
+
+
+
+
+
+
+    </div>
+
+
+
+    <!-- Additional required wrapper -->
+    <!-- <div class="swiper-wrapper"> -->
+    <!-- Slides -->
+
+
+
+
+
+    <!-- If we need pagination -->
+    <!-- <div class="swiper-pagination"></div> -->
+
+    <!-- If we need navigation buttons -->
+
+
+    <!-- If we need scrollbar -->
+
+
+
+    <!-- <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div> -->
+
+
+  </section>
+
+
+  <section class="message">
+    <h2>留言</h2>
+    <form id="postMessage">
+      <label for="" class='n'>姓名</label>
+      <input type="text" name="name" class="entry">
+      <label for="" class='n'>内容</label>
+      <input type="text" name="content" class="entry">
+      <input type="submit" value="提交" class='refer'>
+    </form>
+
+    <ol id="messageList"></ol>
+  </section>
+  <section data-x id="contact">
+    <h1>联系方式</h1>
+    <p>电话:13020165061</p>
+    <p>q q : 782067903</p>
+    <p>微信:Aa5595223</p>
+  </section>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.3.0/Tween.min.js'></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script> -->
+  <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.13.2/dist/av-min.js"></script>
+
+  <script src="./js/bese/View.js"></script>
+  <script src="./js/bese/Model.js"></script>
+  <script src="./js/init_swiper.js"></script>
+  <script src="./js/sticky-topbar.js"></script>
+  <script src="./js/auto-slide-up.js"></script>
+  <script src="./js/smoothly-navigation.js"></script>
+  <script src="./js/module-1.js"></script>
+  <script src="./js/module-2.js"></script>
+  <script src="./js/leancloud.js"></script>
+  <script>
+    setTimeout(function () {
+      siteWelcome.classList.remove('active')
+      window.location.href = "#top";
+    }, 1000)
+    //添加offset 类
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

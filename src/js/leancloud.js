@@ -1,29 +1,31 @@
 !function () {
-    var view = document.querySelector('section.message')
+    var view = View('section.message')
 
-    var model = {
-        init: function () {
-            var APP_ID = 't5SXd57tbmE2h6VXYVm44hDU-gzGzoHsz'
-            var APP_KEY = 'sHg8wcctQnP9ta7F2Ui8imHJ'
+    var model = Model({ resourceName: 'Message' })
+    // {
+    //     init: function () {
+    //         var APP_ID = 't5SXd57tbmE2h6VXYVm44hDU-gzGzoHsz'
+    //         var APP_KEY = 'sHg8wcctQnP9ta7F2Ui8imHJ'
 
-            AV.init({ appId: APP_ID, appKey: APP_KEY });
-        },
-        //获取数据
-        fetch: function () {
-            var query = new AV.Query('Message');
-            return query.find()
-        },
-        //创建数据
-        save: function (name, content) {
-            var Message = AV.Object.extend('Message');
+    //         AV.init({ appId: APP_ID, appKey: APP_KEY });
+    //     },
+    //     //获取数据
+    //     fetch: function () {
+    //         var query = new AV.Query('Message');
+    //         return query.find()
+    //     },
+    //     //创建数据
+    //     save: function (name, content) {
+    //         var Message = AV.Object.extend('Message');
 
-            var message = new Message();
-            return message.save({
-                'name': name,
-                'content': content
-            })
-        }
-    }
+    //         var message = new Message();
+    //         return message.save({
+    //             'name': name,
+    //             'content': content
+    //         })
+    //     }
+    // }
+
 
     var controller = {
         view: null,
@@ -83,24 +85,28 @@
             })
         },
         saveMessage: function (myForm) {
-            var content = myForm.querySelector('input[name = content]').value
-            var name = myForm.querySelector('input[name = name]').value
-            // var Message = AV.Object.extend('Message');
-
+            var content = myForm.querySelector('input[name = content]').value;
+            var name = myForm.querySelector('input[name = name]').value; // var Message = AV.Object.extend('Message');
             // var message = new Message();
-
             // message.save({
             //     'name': name,
             //     'content': content
             // })
-            this.model.save(name, content).then(function (object) {
-                let li = document.createElement('li')
-                li.innerText = object.attributes.name + ':' + object.attributes.content
-                let messageList = document.querySelector('#messageList')
-                messageList.append(li)
-                myMessage.querySelector('input[name = content]').value = ''
-                myMessage.querySelector('input[name = name]').value = ''
-            })
+            if (content === '') {
+                alert('请输入内容')
+            } else if (name === '') { alert('请输入姓名') } else if (content === '' && name === '') { alert('请输入内容') } else {
+                this.model.save({
+                    'name': name,
+                    'content': content
+                }).then(function (object) {
+                    let li = document.createElement('li');
+                    li.innerText = object.attributes.name + ':' + object.attributes.content;
+                    let messageList = document.querySelector('#messageList');
+                    messageList.append(li);
+                    myMessage.querySelector('input[name = content]').value = '';
+                    myMessage.querySelector('input[name = name]').value = '';
+                });
+            }
         }
     }
 
