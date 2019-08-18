@@ -533,4 +533,9 @@ border-radius: 30px;}
   width: 300px;
   height: 200px;
 }
-
+.works p{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  padding-right: 6px;
+  color: #E6686A;
+}
